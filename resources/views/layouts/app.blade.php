@@ -11,7 +11,17 @@
 </head>
 
 <body>
-    @yield('content')
+    <nav class="nav_container">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Series</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        @yield('content')
+    </main>
 </body>
 
 </html>
