@@ -39,11 +39,15 @@
                 <input class="form_input" id="password" name="password" type="password" placeholder="password" required>
 
                 <label for="password_confirm">Confirm password</label>
-                <input class="form_input" id="password_confirm" name="password_confirmation" type="password" placeholder="password" required>
+                <input class="form_input" id="password_confirm" name="password_confirmation" type="password" placeholder="Repeat password" required>
 
                 <button class="auth_btn" type="submit">
-                    Login
+                    Create account
                 </button>
+
+                <a href="{{ route('login') }}" class="reg_link">
+                    <small>Already have an account? Click here to login</small>
+                </a>
             </div>
         </form>
     </div>
