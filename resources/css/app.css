@@ -17,7 +17,7 @@ body {
     padding: 2rem;
     background-color: #FFF;
     box-shadow: rgba(0, 0, 0, 0.4) 8px 8px 8px;
-    height: 500px;
+    min-height: 500px;
     width: 400px;
 }
 
