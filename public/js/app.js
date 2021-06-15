@@ -1863,13 +1863,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=c87fad33bcd2b331c71b94e74a7cb524&page=1';
-var IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
-var SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=c87fad33bcd2b331c71b94e74a7cb524&query="';
+var MOVIE_API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=c87fad33bcd2b331c71b94e74a7cb524&page=1';
+var MOVIE_IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+var MOVIE_SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=c87fad33bcd2b331c71b94e74a7cb524&query="';
 var form = document.getElementById('form');
 var search = document.getElementById('search'); // Get initial movies
 
-getMovies(API_URL);
+getMovies(MOVIE_API_URL);
 
 function getMovies(_x) {
   return _getMovies.apply(this, arguments);
@@ -1907,13 +1907,12 @@ function _getMovies() {
 if (form) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var searchQuery = search.value;
 
-    if (searchQuery && searchQuery !== '') {
-      getMovies(SEARCH_API + searchQuery);
+    if (search.value && search.value !== '') {
+      getMovies(MOVIE_SEARCH_API + search.value);
       search.value = '';
     } else {
-      console.log('No movies found');
+      search.innerHTML = 'No movies found';
     }
   });
 }
