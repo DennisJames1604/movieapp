@@ -39,4 +39,13 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', 'Your email has been updated');
     }
+
+    public function destroy()
+    {
+        $userId = auth()->user()->id;
+
+        DB::delete("DELETE FROM users WHERE id = $userId");
+
+        return redirect()->back()->with('success', 'Your account has been deleted');
+    }
 }

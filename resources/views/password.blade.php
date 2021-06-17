@@ -48,7 +48,7 @@
                     <small>Go back</small>
                 </a>
 
-                <a href="{{ route('register') }}" class="reg_link">
+                <a href="{{ route('user.index', auth()->user()->name) }}" class="reg_link">
                     <small>Click here to update your email</small>
                 </a>
             </div>

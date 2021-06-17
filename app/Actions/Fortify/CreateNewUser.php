@@ -32,6 +32,13 @@ class CreateNewUser implements CreatesNewUsers
             'password' => $this->passwordRules(),
         ])->validate();
 
+        /*
+            $username = $input['name'];
+            $email = $input['email'];
+            $password = Hash::make($input['password']);
+            $createUser = DB::statement("INSERT INTO users (name, email, password) VALUES ('$username', '$email', '$password')");
+        */
+
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
