@@ -88,6 +88,7 @@ body {
     list-style: none;
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .nav_container>ul>li>a {
