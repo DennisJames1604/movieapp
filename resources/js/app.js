@@ -22,7 +22,6 @@ async function fetchAllMovies(url) {
 }
 
 function loadMoviesToDOM(movies) {
-
     mainContent.innerHTML = '';
 
     if (movies.length !== 0) {
