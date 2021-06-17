@@ -26,4 +26,5 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/user/{user}', [UserController::class, 'update'])->name('email.update');
     Route::get('/password/{user}', [PasswordController::class, 'index'])->name('password.index');
     Route::put('/password/{user}', [PasswordController::class, 'update'])->name('password.update');
+    Route::get('/delete', [UserController::class, 'destroy'])->name('user.destroy');
 });
