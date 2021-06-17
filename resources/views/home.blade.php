@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-    Hello world
+    <section id="movies_container"></section>
 @endsection

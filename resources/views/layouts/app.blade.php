@@ -13,9 +13,28 @@
 <body>
     <nav class="nav_container">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ route('home.index') }}">Home</a></li>
             <li><a href="#">Movies</a></li>
             <li><a href="#">Series</a></li>
+            <form class="right_nav" id="form">
+                <input type="text" placeholder="search" class="search_input" id="search">
+            </form>
+
+            <li>
+                <a href="{{ route('user.index', auth()->user()->name) }}">{{ auth()->user()->name }}</a>
+            </li>
+
+            <li>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </li>
         </ul>
     </nav>
 

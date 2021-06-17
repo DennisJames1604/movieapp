@@ -1,19 +1,19 @@
 
-DROP TABLE IF EXISTS movies;
+-- DROP TABLE IF EXISTS movies;
 
-CREATE TABLE movies(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    movie_title VARCHAR(128) NOT NULL,
-    movie_description TEXT NOT NULl
-);
+-- CREATE TABLE movies(
+--     id INT PRIMARY KEY AUTO_INCREMENT,
+--     movie_title VARCHAR(128) NOT NULL,
+--     movie_description TEXT NOT NULl
+-- );
 
-DROP TABLE IF EXISTS movie_ratings;
+-- DROP TABLE IF EXISTS movie_ratings;
 
-CREATE TABLE movie_ratings(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    movie_id INT NOT NULL,
-    FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE
-);
+-- CREATE TABLE movie_ratings(
+--     id INT PRIMARY KEY AUTO_INCREMENT,
+--     movie_id INT NOT NULL,
+--     FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE
+-- );
 
 DROP TABLE IF EXISTS users;
 
