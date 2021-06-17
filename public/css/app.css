@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #a85ae8;
+    background-color: #21211f;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
@@ -45,7 +45,7 @@ body {
 
 .auth_btn {
     padding: 0.8rem 2rem;
-    background-color: #a85ae8;
+    background-color: #21211f;
     border-style: none;
     color: #FFF;
     font-size: 20px;
@@ -54,7 +54,7 @@ body {
 }
 
 .auth_btn:hover {
-    background-color: #9f53db;
+    background-color: #30302e;
     cursor: pointer;
 }
 
@@ -72,5 +72,144 @@ body {
     background-color: #e32929;
     border-radius: 2px;
     margin-bottom: 1rem;
+}
+
+
+.reg_link {
+    color: #000;
+}
+
+.nav_container {
+    background-color: #2b2b29;
+    padding: 0.5rem 2rem;
+}
+
+.nav_container>ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav_container>ul>li>a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.container {
+    padding: 2rem 4rem;
+}
+
+.right_nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#movies_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    background-color: transparent;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: transform .3s;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+  }
+
+.movie_info {
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+.movie_info h3 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    margin-top: 0rem;
+}
+
+.movie_info span {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.movie_info span.green {
+    color: limegreen;
+}
+
+.movie_info span.orange {
+    color: orange;
+}
+
+.movie_info span.red {
+    color: red;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.search_input {
+    padding: 0.5rem;
+    border-radius: 50px;
+    width: 130px;
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+}
+
+input:focus {
+    outline: none;
+}
+
+::-moz-placeholder {
+    color: #FFF;
+}
+
+:-ms-input-placeholder {
+    color: #FFF;
+}
+
+::placeholder {
+    color: #FFF;
+}
+
+.description {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.2s ease-in;
+}
+
+.movie:hover .description {
+    transform: translateY(0);
+}
+
+.no_movie {
+    text-align: center;
+    color: #FFF;
+    font-size: 24px;
 }
 
